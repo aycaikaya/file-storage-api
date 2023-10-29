@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/files")
+@RequestMapping("/api/v1/files")
 public class FileController {
     private final FileService fileService;
 
@@ -41,8 +41,6 @@ public class FileController {
     public ResponseEntity<byte[]> downloadFile(@PathVariable Long fileId) {
         try {
             byte[] fileContent = fileService.downloadFile(fileId);
-            // Customize response headers for file download
-            // For example, you can set Content-Disposition header
             return ResponseEntity.ok(fileContent);
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)

@@ -1,24 +1,33 @@
 package com.java.filestorageapi.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Entity
+@Table(name="files")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class FileEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column
     private String name;
+    @Column
     private String path;
+    @Column
     private Long size;
+    @Column
     private String extension;
+    @Column
     private byte[] content;
 
-    public FileEntity() {
-    }
 
     public FileEntity(String name, String path, Long size, String extension, byte[] content) {
         this.name = name;
