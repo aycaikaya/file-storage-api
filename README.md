@@ -39,6 +39,17 @@ To use this API, follow these steps:
 
 Begin uploading, managing, and retrieving files securely.
 
+## Testing
+Tesing with unit tests possible with
+  mvn run tests
+
+## Testing With Postman
+  1) Import file-storage-api.postman_collection.json from /resources/static directory to Postman
+  2) Send register request
+  3) Send authenticate request
+  4) For file-storage-api requests: take the token from authentication response and add them as bearer authroziation.
+
+
 ## Author
 Ayça İdil Kaya
 
