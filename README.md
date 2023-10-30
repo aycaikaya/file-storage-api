@@ -2,20 +2,20 @@
 Java Developer Challenge
 
 Table of Contents
-1) Overview
-2) Prerequisites
-3) Getting Started
-4) Project Structure
-5) API Documentation
-6) Authentication
-7) Tests
-9) Contributing
-10) License
-11) Author
-12) Notes
+Overview
+Prerequisites
+Getting Started
+Project Structure
+API Documentation
+Authentication
+Tests
+Contributing
+License
+Author
+Notes
 
 
-OVERVIEW
+Overview
 
 This Spring Boot project implements a File Storage and Listing API, providing a secure and efficient way to store, manage, and retrieve files on a server. It offers the following key features:
 
@@ -43,11 +43,11 @@ Documentation:
 Comprehensive API documentation is available via Swagger, making it easy for users and developers to understand and interact with the endpoints.
 
 
-PREREQUISITES
+Prerequisites
 java version: 11
 
 
-GETTING STARTED
+Getting Started
 bash
 Copy code
 # Clone the repository
@@ -60,7 +60,7 @@ cd file-storage-api
 mvn spring-boot:run
 
 
-PROJECT STRUCTURE
+Project Structure
 
 src
 │   ├── main
@@ -110,21 +110,21 @@ src
 
 
 
-API DOCUMENTATION
+API Documentation
 Swagger UI can be accessed at http://localhost:8080/swagger-ui.html#/
 
-TESTS
+Tests
 bash
 Copy code
 # Run tests
 mvn test
 
-LICENSE
+License
 This project is open-source and is licensed under the MIT License. For more details, please refer to the LICENSE file.
 
-AUTHOR
+Author
 Ayça İdil Kaya
 
-NOTES:
+Notes
 Here is the github repo for algorithm study: https://github.com/aycaikaya/algorithm-study
 
