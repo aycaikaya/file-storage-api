@@ -2,6 +2,8 @@ package com.java.filestorageapi.controller;
 
 import com.java.filestorageapi.model.FileEntity;
 import com.java.filestorageapi.service.FileService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/files")
+@Api(value = "File Entity Api documentation")
 public class FileController {
     private final FileService fileService;
 
@@ -22,6 +25,7 @@ public class FileController {
     }
 
     @PostMapping("/upload")
+    @ApiOperation(value = "New File uploading method")
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
         try {
             FileEntity savedFile = fileService.uploadFile(file);
@@ -32,15 +36,17 @@ public class FileController {
     }
 
     @GetMapping("/list")
+    @ApiOperation(value = "File listing method")
     public ResponseEntity<List<FileEntity>> listFiles() {
         List<FileEntity> files = fileService.listFiles();
         return ResponseEntity.ok(files);
     }
 
-    @GetMapping("/{fileId}")
-    public ResponseEntity<byte[]> downloadFile(@PathVariable Long fileId) {
+    @GetMapping("/content/{fileId}")
+    @ApiOperation(value = "File content downloading method")
+    public ResponseEntity<byte[]> downloadFileContent(@PathVariable Long fileId) {
         try {
-            byte[] fileContent = fileService.downloadFile(fileId);
+            byte[] fileContent = fileService.downloadFileContent(fileId);
             return ResponseEntity.ok(fileContent);
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -48,7 +54,8 @@ public class FileController {
         }
     }
 
-    @PutMapping("/{fileId}")
+    @PutMapping("/update/{fileId}")
+    @ApiOperation(value = "File updating method")
     public ResponseEntity<String> updateFile(@PathVariable Long fileId, @RequestBody FileEntity updatedFile) {
         try {
             fileService.updateFile(fileId, updatedFile);
@@ -58,7 +65,8 @@ public class FileController {
         }
     }
 
-    @DeleteMapping("/{fileId}")
+    @DeleteMapping("/delete/{fileId}")
+    @ApiOperation(value = "File deleting method")
     public ResponseEntity<String> deleteFile(@PathVariable Long fileId) {
         try {
             fileService.deleteFile(fileId);

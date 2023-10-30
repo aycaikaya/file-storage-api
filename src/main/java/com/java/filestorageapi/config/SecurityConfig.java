@@ -21,6 +21,13 @@ public class SecurityConfig {
 
     private final AuthenticationProvider authenticationProvider;
 
+    private static final String[] AUTH_WHITELIST = {
+            "/swagger-resources/**",
+            "/swagger-ui.html",
+            "/v2/api-docs",
+            "/webjars/**"
+    };
+
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -34,6 +41,14 @@ public class SecurityConfig {
                                 .permitAll()
                         //.requestMatchers(new AntPathRequestMatcher("/api/v1/files/**"))
                         //.authenticated()
+                        .requestMatchers(new AntPathRequestMatcher("/swagger-ui/**"))
+                        .permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/swagger-ui.html"))
+                        .permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/v2/api-docs"))
+                        .permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/webjars/**"))
+                        .permitAll()
                         .requestMatchers(new AntPathRequestMatcher("/api/v1/authenticate/**"))
                         .permitAll()
                         .anyRequest().authenticated())

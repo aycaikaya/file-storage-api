@@ -68,7 +68,7 @@ public class FileService {
         return fileRepository.findAll();
     }
 
-    public byte[] downloadFile(Long fileId) throws IOException {
+    public byte[] downloadFileContent(Long fileId) throws IOException {
         Optional<FileEntity> fileOptional = fileRepository.findById(fileId);
         if (!fileOptional.isPresent()) {
             throw new IllegalArgumentException("File not found");

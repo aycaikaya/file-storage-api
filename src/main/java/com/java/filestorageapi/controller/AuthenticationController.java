@@ -2,6 +2,8 @@ package com.java.filestorageapi.controller;
 
 
 import com.java.filestorageapi.service.AuthenticationService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,11 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/authenticate")
 @RequiredArgsConstructor
+@Api(value = "User Api documentation")
 public class AuthenticationController {
 
     private final AuthenticationService authenticationService;
 
     @PostMapping("/register")
+    @ApiOperation(value = "New User registering method")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request){
 
@@ -25,6 +29,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/authenticate")
+    @ApiOperation(value = "User authenticating method")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody AuthenticationRequest request){
 

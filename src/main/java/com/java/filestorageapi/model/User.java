@@ -1,6 +1,7 @@
 package com.java.filestorageapi.model;
 
-import jakarta.persistence.*;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,6 +10,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
 
@@ -18,18 +20,23 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ApiModel(value = "User Api model documentation", description = "Model")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(value = "Unique id field of user object")
     private Long id;
 
     @Column(unique = true, nullable = false)
+    @ApiModelProperty(value = "Unique username field of user object")
     private String username;
 
     @Column(nullable = false)
+    @ApiModelProperty(value = "Password field of user object")
     private String password;
 
     @Enumerated(EnumType.STRING)
+    @ApiModelProperty(value = "Role field of user object")
     private Role role;
 
     public Long getId() {
