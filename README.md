@@ -1,7 +1,7 @@
-file-storage-api
+# file-storage-api
 File Storage API for Java Developer Challenge
 
-Overview
+## Overview
 [This Spring Boot project implements a File Storage and Listing API, providing a secure and efficient way to store, manage, and retrieve files on a server. It offers the following key features:
 
 File Storage: The API allows users to upload files to the server via a REST endpoint. The file name, extension, and size are obtained through the API and stored on the server's file system.
@@ -20,30 +20,32 @@ Security: The API is secured with JSON Web Tokens (JWT), ensuring that only auth
 
 Documentation: Comprehensive API documentation is available via Swagger, making it easy for users and developers to understand and interact with the endpoints.]
 
-Prequisites
+## Prequisites
 Java version: 17
 
 
-How to Run
+## How to Run
 To use this API, follow these steps:
 
-Clone the repository to your local machine.
+  1) Clone the repository to your local machine.
+     git clone git@github.com:aycaikaya/file-storage-api.git
 
-Configure the project's application properties, specifying the database connection and security settings.
+  3) Configure the project's application properties, specifying the database connection and security settings.
 
-Build and run the Spring Boot application.
+  4) Build and run the Spring Boot application.
 
-Explore the API via the provided Swagger documentation at http://localhost:8080/swagger-ui.html#/ (assuming the application is running locally on port 8080).
+  5) Explore the API via the provided Swagger documentation at http://localhost:8080/swagger-ui.html#/
+     (assuming the application is running locally on port 8080).
 
 Begin uploading, managing, and retrieving files securely.
 
-Author
+## Author
 Ayça İdil Kaya
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Notes
+## Notes
 Github link to algorithm-study: https://github.com/aycaikaya/algorithm-study
 
 
