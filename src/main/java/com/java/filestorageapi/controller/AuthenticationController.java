@@ -1,6 +1,9 @@
 package com.java.filestorageapi.controller;
 
 
+import com.java.filestorageapi.model.AuthenticationRequest;
+import com.java.filestorageapi.model.AuthenticationResponse;
+import com.java.filestorageapi.model.RegisterRequest;
 import com.java.filestorageapi.service.AuthenticationService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

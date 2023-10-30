@@ -1,4 +1,4 @@
-package com.java.filestorageapi.controller;
+package com.java.filestorageapi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationResponse {
+public class RegisterRequest {
 
-    private String token;
+    private String username;
+
+    String password;
 }

@@ -1,9 +1,9 @@
 package com.java.filestorageapi.service;
 
 import com.java.filestorageapi.config.JwtService;
-import com.java.filestorageapi.controller.AuthenticationRequest;
-import com.java.filestorageapi.controller.AuthenticationResponse;
-import com.java.filestorageapi.controller.RegisterRequest;
+import com.java.filestorageapi.model.AuthenticationRequest;
+import com.java.filestorageapi.model.AuthenticationResponse;
+import com.java.filestorageapi.model.RegisterRequest;
 import com.java.filestorageapi.model.Role;
 import com.java.filestorageapi.model.User;
 import com.java.filestorageapi.repository.UserRepository;
