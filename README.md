@@ -1,7 +1,8 @@
-File Storage API
-Overview
+file-storage-api
+File Storage API for Java Developer Challenge
 
-This Spring Boot project implements a File Storage and Listing API, providing a secure and efficient way to store, manage, and retrieve files on a server. It offers the following key features:
+Overview
+[This Spring Boot project implements a File Storage and Listing API, providing a secure and efficient way to store, manage, and retrieve files on a server. It offers the following key features:
 
 File Storage: The API allows users to upload files to the server via a REST endpoint. The file name, extension, and size are obtained through the API and stored on the server's file system.
 
@@ -17,14 +18,13 @@ File Management: Files can be updated and deleted through REST endpoints, provid
 
 Security: The API is secured with JSON Web Tokens (JWT), ensuring that only authorized users can access its features.
 
-Documentation: Comprehensive API documentation is available via Swagger, making it easy for users and developers to understand and interact with the endpoints.
+Documentation: Comprehensive API documentation is available via Swagger, making it easy for users and developers to understand and interact with the endpoints.]
 
 Prequisites
-
 Java version: 17
 
-Getting Started
 
+How to Run
 To use this API, follow these steps:
 
 Clone the repository to your local machine.
@@ -37,14 +37,16 @@ Explore the API via the provided Swagger documentation at http://localhost:8080/
 
 Begin uploading, managing, and retrieving files securely.
 
-Contributing
-
-Contributions are welcome! Feel free to report issues, submit pull requests, and follow coding standards to improve this project.
+Author
+Ayça İdil Kaya
 
 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This project is open-source and is licensed under the MIT License. For more details, please refer to the LICENSE file.
+Notes
+Github link to algorithm-study: https://github.com/aycaikaya/algorithm-study
 
-Author
 
-Ayça İdil Kaya
+
+
+
